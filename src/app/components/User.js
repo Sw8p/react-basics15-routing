@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
 
-export class Home extends Component {
+export class User extends Component {
 
   render (){
     return (
       <div>
-        <h1>Home</h1>
+        <h3>The User Page</h3>
+        <p>User Id : </p>
       </div>
     )
   }

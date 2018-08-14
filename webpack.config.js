@@ -7,7 +7,8 @@ module.exports = {
   mode: 'development',
   entry: SRC_DIR + '/app/index.js',
   devServer: {
-    contentBase: DIST_DIR
+    contentBase: DIST_DIR,
+    historyApiFallback: true
   },
   output: {
     filename: 'bundle.js',

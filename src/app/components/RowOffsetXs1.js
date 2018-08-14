@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 export const RowOffsetXs1 = ({ children }) => {
   return (
@@ -9,8 +8,4 @@ export const RowOffsetXs1 = ({ children }) => {
       </div>
     </div>
   )
-}
-
-RowOffsetXs1.propTypes = {
-  children: PropTypes.element
 }

@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Button } from './Button'
 
-export const Header = ({ colors, brandName, changeColor }) => {
+export const Header = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">{brandName}</a>
+        <a className="navbar-brand" href="#">Header</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -17,16 +16,9 @@ export const Header = ({ colors, brandName, changeColor }) => {
               <li className="nav-item active">
                 <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
               </li>
-              {colors.map((color, k) => (
-                <li className="nav-item"  key={k}>
-                  <Button
-                    className="nav-link"
-                    value={color}
-                    color={color}
-                    onClickBtn={() => changeColor(color)}
-                   />
-                </li>
-              ))}
+              <li className="nav-item">
+                <a className="nav-link" href="#">User</a>
+              </li>
             </ul>
           </div>
       </div>
@@ -35,7 +27,5 @@ export const Header = ({ colors, brandName, changeColor }) => {
 }
 
 Header.propTypes = {
-  colors: PropTypes.arrayOf(PropTypes.string),
-  brandName: PropTypes.string,
-  changeColor: PropTypes.func
+
 }
