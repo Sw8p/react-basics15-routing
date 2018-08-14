@@ -1,12 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
+import { Link } from 'react-router-dom'
 
 export const Header = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Header</a>
+        <Link to={"/home"} className="navbar-brand">Header</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -14,18 +13,14 @@ export const Header = (props) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                <Link to={"/home"} className="nav-link">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">User</a>
+                <Link to={"/user/" + 5} className="nav-link">User</Link>
               </li>
             </ul>
           </div>
       </div>
     </nav>
   )
-}
-
-Header.propTypes = {
-
 }
